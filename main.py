@@ -8,6 +8,7 @@ Classes
 import math
 import random
 
+
 class StringFoo:
     def __init__(self):
         self.message = ""
@@ -66,20 +67,28 @@ c.show_info()
 
 
 class Hero:
-    def __init__(self):
-        self.hp = None
-        self.Attack = None
-        self.Defense = None
-        self.Name = ""
-
-    def rolling_hp(self):
+    def __init__(self, name):
         self.hp = random.randint(2, 10)
-
-    def rolling_AnD(self):
-        self.Attack = random.randint(1, 6)
-        self.Defense = random.randint(1, 6)
+        self.attack = random.randint(1, 6)
+        self.defense = random.randint(1, 6)
+        self.name = name
 
     def Damage_taken(self):
-        pass
+        if self.defense > self.attack:
+            self.hp -= 0
+            print(f"{self.name} has {self.hp} hp after taking 0 dmg")
+        else:
+            self.hp -= self.attack - self.defense
+            print(f"{self.name} has {self.hp} hp after taking {self.attack - self.defense} dmg")
 
+    def Alive(self):
+        return self.hp > 0
+
+
+h = Hero("Jack")
+
+
+h.Damage_taken()
+if not h.Alive():
+    print("mort")
 
