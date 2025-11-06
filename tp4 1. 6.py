@@ -31,7 +31,7 @@ class Hero:
         return self.hp > 0
 
 
-h = Hero("Jack")
+h = Hero("JacK")
 
 h.Damage_taken()
 if not h.Alive():
