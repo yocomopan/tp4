@@ -1,10 +1,9 @@
 """
 2025-11-03
 Ivan Zheryakov
-Classes
+Classes = [StringFoo, Rectangle, Circle, Hero]
 """
 
-#from math import pi
 import math
 import random
 
@@ -87,8 +86,6 @@ class Hero:
 
 h = Hero("Jack")
 
-
 h.Damage_taken()
 if not h.Alive():
-    print("mort")
-
+    print("They have Died")
