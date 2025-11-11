@@ -17,7 +17,7 @@ class Rectangle:
     def show_info(self):
         if self.surface_rectangle is None:
             self.solving_surface_rectangle()
-        print(f"This rectangle's surface is {self.surface_rectangle}")
+        print(f"L'aire de ce rectangle est {self.surface_rectangle}")
 
 
 r = Rectangle(9, 8)
