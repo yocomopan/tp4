@@ -17,5 +17,5 @@ class StringFoo:
 
 
 s = StringFoo()
-s.set_string(msg="Hello World!")
+s.set_string(msg="Bienvenu à Python!")
 s.print_string()
