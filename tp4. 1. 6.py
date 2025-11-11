@@ -17,21 +17,21 @@ class Hero:
     def Damage_taken(self):
         if self.dexterity > self.attack:
             self.hp -= 0
-            print(f"{self.name} has dodged {self.attack} dmg")
+            print(f"{self.name} a évité {self.attack} dégats")
 
         elif self.defense >= self.attack:
             self.hp -= 0
-            print(f"{self.name} has {self.hp} hp after taking 0 dmg")
+            print(f"{self.name} a {self.hp} hp après avoir reçu 0 dégats")
         else:
             self.hp -= self.attack - self.defense
-            print(f"{self.name} has {self.hp} hp after taking {self.attack - self.defense} dmg")
+            print(f"{self.name} a {self.hp} hp après avoir reçu {self.attack - self.defense} dégats")
 
     def Alive(self):
         return self.hp > 0
 
 
-h = Hero("Sam")
+h = Hero("Jack")
 
 h.Damage_taken()
 if not h.Alive():
-    print("They have Died")
+    print(f"Il/Elle est mort")
