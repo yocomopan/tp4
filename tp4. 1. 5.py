@@ -20,12 +20,12 @@ class Human:
 
     def show_info(self):
         print(
-            f"Force {self.human_strength}\n"
-            f"Dextérité {self.human_dexterity}\n"
-            f"Constitution {self.human_con}\n"
-            f"Intelligence {self.human_iq}\n"
-            f"Sagesse {self.human_wisdom}\n"
-            f"Charisme {self.human_charisma}\n")
+            f"Force: {self.human_strength}\n"
+            f"Dextérité: {self.human_dexterity}\n"
+            f"Constitution: {self.human_con}\n"
+            f"Intelligence: {self.human_iq}\n"
+            f"Sagesse: {self.human_wisdom}\n"
+            f"Charisme: {self.human_charisma}\n")
 
 
 Execute = Human()
