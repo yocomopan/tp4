@@ -25,7 +25,7 @@ class Circle:
             self.solving_perimeter_circle()
         if self.surface_circle is None:
             self.solving_surface_circle()
-        print(f"Your Circle's stats are:\nPerimeter: {self.perimeter}\nSurface: {self.surface_circle}\n")
+        print(f"Les variables de votre Cercle:\nPerimètre: {self.perimeter}\nAire: {self.surface_circle}\n")
 
 
 c = Circle(10)
