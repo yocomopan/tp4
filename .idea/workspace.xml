@@ -4,11 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da12b831-685f-49ad-b58c-c71b9927faa3" name="Changes" comment="Modif. removed 2-3 def, modif. code">
-      <change afterPath="$PROJECT_DIR$/tp4 1. 6.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tp4.1.5.py" afterDir="false" />
+    <list default="true" id="da12b831-685f-49ad-b58c-c71b9927faa3" name="Changes" comment="Modif. added 2 files #5 #6, added class humain">
+      <change afterPath="$PROJECT_DIR$/tp4. 1. 2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tp4. 1. 3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tp4. 1. 4.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/tp4. 1. 1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp4 1. 6.py" beforeDir="false" afterPath="$PROJECT_DIR$/tp4. 1. 6.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp4.1.5.py" beforeDir="false" afterPath="$PROJECT_DIR$/tp4. 1. 5.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,13 +53,24 @@
   "keyToString": {
     "Python.main.executor": "Run",
     "Python.tp4 1. 6.executor": "Run",
+    "Python.tp4. 1. 1.executor": "Run",
     "Python.tp4.1.5.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master"
+  },
+  "keyToStringList": {
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "Python"
+    ]
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\zheryakovi\PycharmProjects\tp4" />
+    </key>
+  </component>
   <component name="RunManager">
-    <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+    <configuration name="tp4. 1. 1" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="tp4" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -69,7 +83,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\zheryakovi\PycharmProjects\tp4\tp4. 1. 1.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -111,12 +125,29 @@
       <option name="project" value="LOCAL" />
       <updated>1762286162750</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Modif. added 2 files #5 #6, added class humain">
+      <option name="closed" value="true" />
+      <created>1762448852398</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1762448852398</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Modif. added 2 files #5 #6, added class humain">
+      <option name="closed" value="true" />
+      <created>1762448891104</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1762448891104</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Modif. self variables des classes" />
     <MESSAGE value="Modif. removed 2-3 def, modif. code" />
-    <option name="LAST_COMMIT_MESSAGE" value="Modif. removed 2-3 def, modif. code" />
+    <MESSAGE value="Modif. added 2 files #5 #6, added class humain" />
+    <option name="LAST_COMMIT_MESSAGE" value="Modif. added 2 files #5 #6, added class humain" />
   </component>
 </project>
