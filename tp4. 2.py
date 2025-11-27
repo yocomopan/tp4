@@ -34,7 +34,7 @@ class NPC:
         donnees.sort(reverse=True)
         donnees.pop()
         return sum(donnees)
-            
+
     def show_info(self):
         print(f"{self.npc_name} the {self.npc_profession} NPC:\n"
               f"- Race, Species: {self.npc_race}, {self.npc_species}\n"
@@ -47,14 +47,20 @@ class NPC:
               f"- {self.npc_health} health and {self.npc_armor} armor")
 
 
-
-"""
-class Kobold:
-    def __init__(self):
-        pass
+h = NPC("Yvan", "Programmeur", "Humain", "Humain")
+h.show_info()
 
 
-class Hero:
-    def __init__(self):
-        pass
-"""
+class Kobold(NPC):
+    def __init__(self, Race):
+        super().__init__(Race, Species="")
+        self.npc_strength = self.stats()
+        self.npc_health = 20
+        self.npc_armor -= 3
+
+
+class Hero(NPC):
+    def __init__(self, Race):
+        super().__init__(Race, Species="")
+
+
