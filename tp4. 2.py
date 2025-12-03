@@ -6,34 +6,35 @@ Exercice de classe 2
 import random
 
 
+def stats():
+    """
+    automatic function
+    List captures 4 random generated numbers and stores them
+    Reverse puts the list in order from biggest to smallest
+    Pop() removes the last info stored in the list
+    """
+    donnees = []
+    for x in range(4):
+        donnees.append(random.randint(1, 6))
+    donnees.sort(reverse=True)
+    donnees.pop()
+    return sum(donnees)
+
+
 class NPC:
-    def __init__(self, Name, Profession, Race, Species):
+    def __init__(self, Name="", Profession="", Race="", Species=""):
         self.npc_race = Race
         self.npc_name = Name
         self.npc_species = Species
         self.npc_profession = Profession
         self.npc_health = 20
         self.npc_armor = random.randint(1, 12)
-        self.npc_strength = self.stats()
-        self.npc_dext = self.stats()
-        self.npc_con = self.stats()
-        self.npc_iq = self.stats()
-        self.npc_wisdom = self.stats()
-        self.npc_cha = self.stats()
-
-    def stats(self):
-        """
-        automatic function
-        List captures 4 random generated numbers and stores them
-        Reverse puts the list in order from biggest to smallest
-        Pop() removes the last info stored in the list
-        """
-        donnees = []
-        for x in range(4):
-            donnees.append(random.randint(1, 6))
-        donnees.sort(reverse=True)
-        donnees.pop()
-        return sum(donnees)
+        self.npc_strength = stats()
+        self.npc_dext = stats()
+        self.npc_con = stats()
+        self.npc_iq = stats()
+        self.npc_wisdom = stats()
+        self.npc_cha = stats()
 
     def show_info(self):
         print(f"{self.npc_name} the {self.npc_profession} NPC:\n"
@@ -53,14 +54,15 @@ h.show_info()
 
 class Kobold(NPC):
     def __init__(self, Race):
-        super().__init__(Race, Species="")
-        self.npc_strength = self.stats()
+        super().__init__(Name="Bob", Race="Kobold", Species="Kobold")
+        self.npc_strength = stats()
         self.npc_health = 20
         self.npc_armor -= 3
 
 
 class Hero(NPC):
     def __init__(self, Race):
-        super().__init__(Race, Species="")
+        super().__init__(Name="Bob", Race="Humain", Species="humain")
+        self.npc_strength = stats()
 
 
