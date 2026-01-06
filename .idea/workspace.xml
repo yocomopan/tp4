@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da12b831-685f-49ad-b58c-c71b9927faa3" name="Changes" comment="modif. super() in class Kobold &amp; Hero">
+    <list default="true" id="da12b831-685f-49ad-b58c-c71b9927faa3" name="Changes" comment="modif. strings">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tp4. 2.py" beforeDir="false" afterPath="$PROJECT_DIR$/tp4. 2.py" afterDir="false" />
     </list>
@@ -68,7 +68,7 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="tp4. 1. 1" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+    <configuration name="tp4. 1. 1" type="PythonConfigurationType" factoryName="Python">
       <module name="tp4" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -235,7 +235,15 @@
       <option name="project" value="LOCAL" />
       <updated>1764278365336</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="modif. strings">
+      <option name="closed" value="true" />
+      <created>1764796786716</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1764796786716</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -263,6 +271,7 @@
     <MESSAGE value="Added example dice" />
     <MESSAGE value="Modif. 2 new function, 2 new classes" />
     <MESSAGE value="modif. super() in class Kobold &amp; Hero" />
-    <option name="LAST_COMMIT_MESSAGE" value="modif. super() in class Kobold &amp; Hero" />
+    <MESSAGE value="modif. strings" />
+    <option name="LAST_COMMIT_MESSAGE" value="modif. strings" />
   </component>
 </project>

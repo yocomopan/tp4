@@ -5,6 +5,8 @@ Exercice de classe 2
 """
 import random
 
+play_game = True
+
 
 def stats():
     """
@@ -27,7 +29,7 @@ class NPC:
         self.npc_name = Name
         self.npc_species = Species
         self.npc_profession = Profession
-        self.npc_health = 20
+        self.npc_health = random.randint(1, 12)
         self.npc_armor = random.randint(1, 12)
         self.npc_strength = stats()
         self.npc_dext = stats()
@@ -48,21 +50,68 @@ class NPC:
               f"- {self.npc_health} health and {self.npc_armor} armor")
 
 
-h = NPC("Yvan", "Programmeur", "Humain", "Humain")
-h.show_info()
+# h = NPC("Yvan", "Programmeur", "Humain", "Humain")
+# h.show_info()
 
 
 class Kobold(NPC):
-    def __init__(self, Race):
-        super().__init__(Name="Bob", Race="Kobold", Species="Kobold")
-        self.npc_strength = stats()
-        self.npc_health = 20
-        self.npc_armor -= 3
+    def __init__(self, race="Kobold"):
+        super().__init__(Name="Bob", Race=race, Species="Reptile")
+
+    def show_kobold(self):
+        print(f"HP: {self.npc_health}\n"
+              f"Strength: {self.npc_strength}\n")
 
 
 class Hero(NPC):
-    def __init__(self, Race):
-        super().__init__(Name="Bob", Race="Humain", Species="humain")
-        self.npc_strength = stats()
+    def __init__(self, race="humain"):
+        super().__init__(Name="Bob", Race=race, Species="Ape")
+
+    def show_hero(self):
+        print(f"HP: {self.npc_health}\n"
+              f"Strength: {self.npc_strength}\n")
 
 
+# he = Hero
+# he.show_hero()
+
+while play_game:
+    input("Roulez ou Mourez\n"
+          "1 - Debuter\n"
+          "2 - Quitter\n")
+    if input == 1:
+        n = NPC("A", "B", "C", "D")
+        n.show_info()
+        combat = True
+        while combat:
+            print("Ennemi: ")
+            k = Kobold()
+            k.show_kobold()
+            print("Vous: ")
+            h = Hero()
+            h.show_hero()
+
+            die_kobold = random.randint(1, 12)
+            die_hero = random.randint(1, 20)
+
+            if die_hero == 20:
+                k.npc_health -= 8
+            elif die_hero == 1:
+                k.npc_health -= 0
+            else:
+                if die_hero > k.npc_armor:
+                    k.npc_health -= (k.npc_armor - die_hero)
+                else:
+                    print("Rater")
+
+            if die_kobold > h.npc_armor:
+                h.npc_health -= (h.npc_armor - die_kobold)
+            else:
+                h.npc_health -= 0
+
+
+
+    elif input == 2:
+        pass
+    else:
+        play_game = True
