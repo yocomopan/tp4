@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da12b831-685f-49ad-b58c-c71b9927faa3" name="Changes" comment="modif. ajouter des if/elif/else avec des calculs qui determine les degats subit des deux partis. ajouter un loop pour faire determiner la partie qui gagne.">
+    <list default="true" id="da12b831-685f-49ad-b58c-c71b9927faa3" name="Changes" comment="modif. Plus de rng ont été ajouté et trouvé la solution aux calculs des dégats pris des deux parties.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tp4. 2.py" beforeDir="false" afterPath="$PROJECT_DIR$/tp4. 2.py" afterDir="false" />
     </list>
@@ -251,7 +251,15 @@
       <option name="project" value="LOCAL" />
       <updated>1767719569646</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="modif. Plus de rng ont été ajouté et trouvé la solution aux calculs des dégats pris des deux parties.">
+      <option name="closed" value="true" />
+      <created>1767993536074</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1767993536074</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -281,6 +289,7 @@
     <MESSAGE value="modif. super() in class Kobold &amp; Hero" />
     <MESSAGE value="modif. strings" />
     <MESSAGE value="modif. ajouter des if/elif/else avec des calculs qui determine les degats subit des deux partis. ajouter un loop pour faire determiner la partie qui gagne." />
-    <option name="LAST_COMMIT_MESSAGE" value="modif. ajouter des if/elif/else avec des calculs qui determine les degats subit des deux partis. ajouter un loop pour faire determiner la partie qui gagne." />
+    <MESSAGE value="modif. Plus de rng ont été ajouté et trouvé la solution aux calculs des dégats pris des deux parties." />
+    <option name="LAST_COMMIT_MESSAGE" value="modif. Plus de rng ont été ajouté et trouvé la solution aux calculs des dégats pris des deux parties." />
   </component>
 </project>

@@ -6,6 +6,8 @@ Exercice de classe 2
 import random
 
 play_game = True
+k_list = []
+h_list = []
 
 
 def stats():
@@ -62,6 +64,8 @@ class Kobold(NPC):
         print(f"HP: {self.npc_health}\n"
               f"Strength: {self.npc_strength}\n")
 
+    def attaquer_kobold(self):
+
 
 class Hero(NPC):
     def __init__(self, race="humain"):
@@ -71,52 +75,93 @@ class Hero(NPC):
         print(f"HP: {self.npc_health}\n"
               f"Strength: {self.npc_strength}\n")
 
+    def attaquer_hero(self):
+        capable_hero = random.randint(1, 20)
+        if capable_hero == 20:
+            die_hero = random.randint(1, 8)
+        elif capable_hero == 1:
+            die_hero = 0
+        else:
+            die_hero = random.randint(1, 6)
 
-# he = Hero
-# he.show_hero()
 
-while play_game:
-    OPS = int(input("Roulez ou Mourez\n"
-                    "1 - Debuter\n"
-                    "2 - Quitter\n"))
-    if OPS == 1:
-        n = NPC("A", "B", "C", "D")
-        n.show_info()
-        combat = True
-        die_kobold = random.randint(1, 12)
-        die_hero = random.randint(1, 20)
-        while combat:
-            if h.npc_health == 0
-                print()
 
-            print("Ennemi: ")
-            k = Kobold()
-            k.show_kobold()
-            print("Vous: ")
-            h = Hero()
-            h.show_hero()
-            input("")
+n = NPC("A", "B", "C", "D")
+h = Hero()
+k = Kobold()
 
-            if die_hero == 20:
-                crit_hero = random.randint(6, 8)
-                print(f"Attaque critique!\n"
-                      f"Vous tapez le kobold pour {crit_hero} degats\n ")
-
-            elif die_hero > k.npc_armor:
-                die_hp_hero = random.randint(1, 6)
-                print(f"Vous tapez Kobold pour {die_hp_hero}")
-
-            elif die_hero < k.npc_armor or die_hero == 1:
-                print("Vous ratez votre coup.")
-
-            if die_kobold > h.npc_armor:
-                die_hp_kobold = random.randint(1, 6)
-                print(f"Kobold vous tape pour {die_hp_kobold}\n")
-
-            else:
-                print("Kobold rate son coup.\n")
-
-    elif OPS == 2:
-        play_game = False
-        print("LOADING COMPLETE\n"
-              "EXITING PROGRAM")
+# while play_game:
+#     OPS = int(input("Roulez ou Mourez\n"
+#                     "1 - Debuter\n"
+#                     "2 - Quitter\n"))
+#
+#     if OPS == 1:
+#         h_list.append(h.npc_health)
+#         k_list.append(k.npc_health)
+#         n.show_info()
+#
+#         combat = True
+#
+#         while combat:
+#             die_kobold = random.randint(1, 12)
+#             die_hero = random.randint(1, 20)
+#
+#             if h.npc_health <= 0 and k.npc_health <= 0:
+#                 print("Nulle. Vous et Kobold etes mort.\n"
+#                       f"{h_list} - HERO HP evolution\n"
+#                       f"{k_list} - KOBOLD HP evolution")
+#                 play_game = False
+#                 exit()
+#
+#             if h.npc_health <= 0:
+#                 print("Vous etes mort! Kobold gagne.\n"
+#                       f"{h_list} - HERO HP evolution\n"
+#                       f"{k_list} - KOBOLD HP evolution")
+#                 play_game = False
+#                 exit()
+#             if k.npc_health <= 0:
+#                 print("Kobold est mort. Vous gagnez!\n"
+#                       f"{h_list} - HERO HP evolution\n"
+#                       f"{k_list} - KOBOLD HP evolution")
+#                 play_game = False
+#                 exit()
+#             print("Ennemi: ")
+#
+#             k.show_kobold()
+#             print("Vous: ")
+#
+#             h.show_hero()
+#             input("")
+#
+#             if die_hero == 20:
+#                 crit_hero = random.randint(6, 8)
+#                 print(f"Attaque critique!\n"
+#                       f"Vous tapez le kobold pour {crit_hero} degats\n ")
+#                 k.npc_health -= crit_hero
+#                 k_list.append(k.npc_health)
+#
+#
+#             elif die_hero > k.npc_armor:
+#                 die_hp_hero = random.randint(1, 6)
+#                 print(f"Vous tapez Kobold pour {die_hp_hero}")
+#                 k.npc_health -= die_hp_hero
+#                 k_list.append(k.npc_health)
+#
+#             elif die_hero < k.npc_armor or die_hero == 1:
+#                 print("Vous ratez votre coup.")
+#                 k_list.append(k.npc_health)
+#
+#             if die_kobold > h.npc_armor:
+#                 die_hp_kobold = random.randint(1, 6)
+#                 print(f"Kobold vous tape pour {die_hp_kobold}\n")
+#                 h.npc_health -= die_hp_kobold
+#                 h_list.append(h.npc_health)
+#
+#             else:
+#                 print("Kobold rate son coup.\n")
+#                 h_list.append(h.npc_health)
+#
+#     elif OPS == 2:
+#         play_game = False
+#         print("LOADING COMPLETE\n"
+#               "EXITING PROGRAM")
