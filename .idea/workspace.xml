@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da12b831-685f-49ad-b58c-c71b9927faa3" name="Changes" comment="modif. Plus de rng ont été ajouté et trouvé la solution aux calculs des dégats pris des deux parties.">
+    <list default="true" id="da12b831-685f-49ad-b58c-c71b9927faa3" name="Changes" comment="modif. ajouté 2 méthodes d'attaque pour les deux sub-classe">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tp4. 2.py" beforeDir="false" afterPath="$PROJECT_DIR$/tp4. 2.py" afterDir="false" />
     </list>
@@ -35,6 +35,9 @@
     &quot;accountId&quot;: &quot;20a10a27-f823-4cb3-af3c-0dddc43c1cdd&quot;
   }
 }</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/tp4. 2.py" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
 }</component>
@@ -259,7 +262,15 @@
       <option name="project" value="LOCAL" />
       <updated>1767993536074</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="modif. ajouté 2 méthodes d'attaque pour les deux sub-classe">
+      <option name="closed" value="true" />
+      <created>1768506933022</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1768506933022</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -290,6 +301,7 @@
     <MESSAGE value="modif. strings" />
     <MESSAGE value="modif. ajouter des if/elif/else avec des calculs qui determine les degats subit des deux partis. ajouter un loop pour faire determiner la partie qui gagne." />
     <MESSAGE value="modif. Plus de rng ont été ajouté et trouvé la solution aux calculs des dégats pris des deux parties." />
-    <option name="LAST_COMMIT_MESSAGE" value="modif. Plus de rng ont été ajouté et trouvé la solution aux calculs des dégats pris des deux parties." />
+    <MESSAGE value="modif. ajouté 2 méthodes d'attaque pour les deux sub-classe" />
+    <option name="LAST_COMMIT_MESSAGE" value="modif. ajouté 2 méthodes d'attaque pour les deux sub-classe" />
   </component>
 </project>

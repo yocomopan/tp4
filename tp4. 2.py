@@ -64,7 +64,23 @@ class Kobold(NPC):
         print(f"HP: {self.npc_health}\n"
               f"Strength: {self.npc_strength}\n")
 
-    def attaquer_kobold(self):
+    def attaquer(self, cible):
+        capable = random.randint(1, 20)
+
+        if capable == 20:
+            cible.subir_degats(random.randint(1, 8))
+            print("GODLIKE -k")
+
+        elif capable == 1:
+            print("Il est miserables...")
+
+        else:
+            cible.subir_degats(random.randint(1, 6))
+            print("touche! -k")
+        print("\n")
+
+    def subir_degats(self, dommage):
+        self.npc_health -= dommage
 
 
 class Hero(NPC):
@@ -75,20 +91,31 @@ class Hero(NPC):
         print(f"HP: {self.npc_health}\n"
               f"Strength: {self.npc_strength}\n")
 
-    def attaquer_hero(self):
-        capable_hero = random.randint(1, 20)
-        if capable_hero == 20:
-            die_hero = random.randint(1, 8)
-        elif capable_hero == 1:
-            die_hero = 0
-        else:
-            die_hero = random.randint(1, 6)
+    def attaquer(self, cible):
+        capable = random.randint(1, 20)
 
+        if capable == 20:
+            cible.subir_degats(random.randint(1, 8))
+            print("GODLIKE -h")
+
+        elif capable == 1:
+            print("Tu es miserables...")
+
+        else:
+            cible.subir_degats(random.randint(1, 6))
+            print("touche! -h")
+
+
+    def subir_degats(self, dommage):
+        self.npc_health -= dommage
 
 
 n = NPC("A", "B", "C", "D")
 h = Hero()
 k = Kobold()
+for i in range(50):
+    h.attaquer(k)
+    k.attaquer(h)
 
 # while play_game:
 #     OPS = int(input("Roulez ou Mourez\n"
