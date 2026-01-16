@@ -113,7 +113,7 @@ class Hero(NPC):
 n = NPC("A", "B", "C", "D")
 h = Hero()
 k = Kobold()
-for i in range(50):
+for i in range(40):
     h.attaquer(k)
     k.attaquer(h)
 
