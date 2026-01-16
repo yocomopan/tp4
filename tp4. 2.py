@@ -5,10 +5,6 @@ Exercice de classe 2
 """
 import random
 
-play_game = True
-k_list = []
-h_list = []
-
 
 def stats():
     """
