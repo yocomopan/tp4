@@ -26,11 +26,11 @@ def stats():
 
 
 class NPC:
-    def __init__(self, Name="", Profession="", Race="", Species=""):
-        self.npc_race = Race
-        self.npc_name = Name
-        self.npc_species = Species
-        self.npc_profession = Profession
+    def __init__(self, name="", profession="", race="", species=""):
+        self.npc_race = race
+        self.npc_name = name
+        self.npc_species = species
+        self.npc_profession = profession
         self.npc_health = random.randint(1, 12)
         self.npc_armor = random.randint(1, 12)
         self.npc_strength = stats()
@@ -49,16 +49,12 @@ class NPC:
               f"- Intelligence {self.npc_iq}\n"
               f"- Wisdom {self.npc_wisdom}\n"
               f"- Charisma {self.npc_cha}\n"
-              f"- {self.npc_health} health and {self.npc_armor} armor\n")
-
-
-# h = NPC("Yvan", "Programmeur", "Humain", "Humain")
-# h.show_info()
+              f"- {self.npc_health} health et {self.npc_armor} armure\n")
 
 
 class Kobold(NPC):
     def __init__(self, race="Kobold"):
-        super().__init__(Name="Bob", Race=race, Species="Reptile")
+        super().__init__(name="Pob Bob", race=race, species="Reptile")
 
     def show_kobold(self):
         print(f"HP: {self.npc_health}\n"
@@ -69,14 +65,17 @@ class Kobold(NPC):
 
         if capable == 20:
             cible.subir_degats(random.randint(1, 8))
-            print("GODLIKE -k")
+            print(f"GODLIKE {cible.npc_name}!")
 
         elif capable == 1:
-            print("Il est miserables...")
+            print("Il as manqué son coup, il est miserables...")
 
         else:
-            cible.subir_degats(random.randint(1, 6))
-            print("touche! -k")
+            if capable >= cible.npc_armor:
+                cible.subir_degats(random.randint(1, 6))
+                print(f"{cible.npc_name} touche!")
+            else:
+                print(f"Il as manqué son coup, l'armure de {cible.npc_name} l'a bloqué.")
         print("\n")
 
     def subir_degats(self, dommage):
@@ -85,26 +84,30 @@ class Kobold(NPC):
 
 class Hero(NPC):
     def __init__(self, race="humain"):
-        super().__init__(Name="Bob", Race=race, Species="Ape")
+        name = input("Quelle est votre nom? ")
+        super().__init__(name, race=race, species="Ape")
 
     def show_hero(self):
         print(f"HP: {self.npc_health}\n"
-              f"Strength: {self.npc_strength}\n")
+              f"Strength: {self.npc_strength}\n"
+              f"Name: {super()}")
 
     def attaquer(self, cible):
         capable = random.randint(1, 20)
 
         if capable == 20:
             cible.subir_degats(random.randint(1, 8))
-            print("GODLIKE -h")
+            print(f"GODLIKE {cible.npc_name}!")
 
         elif capable == 1:
-            print("Tu es miserables...")
+            print("Tu as manqué ton coup, tu es miserables...")
 
         else:
-            cible.subir_degats(random.randint(1, 6))
-            print("touche! -h")
-
+            if capable >= cible.npc_armor:
+                cible.subir_degats(random.randint(1, 6))
+                print(f"{cible.npc_name} touche!")
+            else:
+                print(f"Tu as manqué ton coup, l'armure de {cible.npc_name} l'a bloqué.")
 
     def subir_degats(self, dommage):
         self.npc_health -= dommage
@@ -116,79 +119,3 @@ k = Kobold()
 for i in range(40):
     h.attaquer(k)
     k.attaquer(h)
-
-# while play_game:
-#     OPS = int(input("Roulez ou Mourez\n"
-#                     "1 - Debuter\n"
-#                     "2 - Quitter\n"))
-#
-#     if OPS == 1:
-#         h_list.append(h.npc_health)
-#         k_list.append(k.npc_health)
-#         n.show_info()
-#
-#         combat = True
-#
-#         while combat:
-#             die_kobold = random.randint(1, 12)
-#             die_hero = random.randint(1, 20)
-#
-#             if h.npc_health <= 0 and k.npc_health <= 0:
-#                 print("Nulle. Vous et Kobold etes mort.\n"
-#                       f"{h_list} - HERO HP evolution\n"
-#                       f"{k_list} - KOBOLD HP evolution")
-#                 play_game = False
-#                 exit()
-#
-#             if h.npc_health <= 0:
-#                 print("Vous etes mort! Kobold gagne.\n"
-#                       f"{h_list} - HERO HP evolution\n"
-#                       f"{k_list} - KOBOLD HP evolution")
-#                 play_game = False
-#                 exit()
-#             if k.npc_health <= 0:
-#                 print("Kobold est mort. Vous gagnez!\n"
-#                       f"{h_list} - HERO HP evolution\n"
-#                       f"{k_list} - KOBOLD HP evolution")
-#                 play_game = False
-#                 exit()
-#             print("Ennemi: ")
-#
-#             k.show_kobold()
-#             print("Vous: ")
-#
-#             h.show_hero()
-#             input("")
-#
-#             if die_hero == 20:
-#                 crit_hero = random.randint(6, 8)
-#                 print(f"Attaque critique!\n"
-#                       f"Vous tapez le kobold pour {crit_hero} degats\n ")
-#                 k.npc_health -= crit_hero
-#                 k_list.append(k.npc_health)
-#
-#
-#             elif die_hero > k.npc_armor:
-#                 die_hp_hero = random.randint(1, 6)
-#                 print(f"Vous tapez Kobold pour {die_hp_hero}")
-#                 k.npc_health -= die_hp_hero
-#                 k_list.append(k.npc_health)
-#
-#             elif die_hero < k.npc_armor or die_hero == 1:
-#                 print("Vous ratez votre coup.")
-#                 k_list.append(k.npc_health)
-#
-#             if die_kobold > h.npc_armor:
-#                 die_hp_kobold = random.randint(1, 6)
-#                 print(f"Kobold vous tape pour {die_hp_kobold}\n")
-#                 h.npc_health -= die_hp_kobold
-#                 h_list.append(h.npc_health)
-#
-#             else:
-#                 print("Kobold rate son coup.\n")
-#                 h_list.append(h.npc_health)
-#
-#     elif OPS == 2:
-#         play_game = False
-#         print("LOADING COMPLETE\n"
-#               "EXITING PROGRAM")
