@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da12b831-685f-49ad-b58c-c71b9927faa3" name="Changes" comment="Version Finale">
-      <change afterPath="$PROJECT_DIR$/tp4. 3.py" afterDir="false" />
+    <list default="true" id="da12b831-685f-49ad-b58c-c71b9927faa3" name="Changes" comment="Version Finale 2.0 (enelvé les variables inutiles)">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp4. 3.py" beforeDir="false" afterPath="$PROJECT_DIR$/tp4. 3.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -303,7 +304,23 @@
       <option name="project" value="LOCAL" />
       <updated>1768591540709</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Debut de exercice 3 tp4, et importer random.">
+      <option name="closed" value="true" />
+      <created>1768591861784</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1768591861784</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Version Finale 2.0 (enelvé les variables inutiles)">
+      <option name="closed" value="true" />
+      <created>1768592015837</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1768592015837</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -338,6 +355,8 @@
     <MESSAGE value="modif. ajouté 4 méthodes total aux classes Kobold et Hero  qui ont maintnenant une méthode d'attaquer et subir des dégats chacun. La simulation est en commentaires." />
     <MESSAGE value="Version presque finale" />
     <MESSAGE value="Version Finale" />
-    <option name="LAST_COMMIT_MESSAGE" value="Version Finale" />
+    <MESSAGE value="Debut de exercice 3 tp4, et importer random." />
+    <MESSAGE value="Version Finale 2.0 (enelvé les variables inutiles)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Version Finale 2.0 (enelvé les variables inutiles)" />
   </component>
 </project>
