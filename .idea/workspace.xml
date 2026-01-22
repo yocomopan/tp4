@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da12b831-685f-49ad-b58c-c71b9927faa3" name="Changes" comment="Modif. ajouté le code de tp4. 2, et ajouté une nouvelle classe Enum et presque tout ses alignements">
+    <list default="true" id="da12b831-685f-49ad-b58c-c71b9927faa3" name="Changes" comment="Modif. ajoute un dataclass et une methode qui determine si les NPC sont vivants ou pas apres plusieurs combats.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tp4. 3.py" beforeDir="false" afterPath="$PROJECT_DIR$/tp4. 3.py" afterDir="false" />
     </list>
@@ -355,7 +355,15 @@
       <option name="project" value="LOCAL" />
       <updated>1768593220792</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Modif. ajoute un dataclass et une methode qui determine si les NPC sont vivants ou pas apres plusieurs combats.">
+      <option name="closed" value="true" />
+      <created>1768928722572</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1768928722572</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -393,6 +401,7 @@
     <MESSAGE value="Debut de exercice 3 tp4, et importer random." />
     <MESSAGE value="Version Finale 2.0 (enelvé les variables inutiles)" />
     <MESSAGE value="Modif. ajouté le code de tp4. 2, et ajouté une nouvelle classe Enum et presque tout ses alignements" />
-    <option name="LAST_COMMIT_MESSAGE" value="Modif. ajouté le code de tp4. 2, et ajouté une nouvelle classe Enum et presque tout ses alignements" />
+    <MESSAGE value="Modif. ajoute un dataclass et une methode qui determine si les NPC sont vivants ou pas apres plusieurs combats." />
+    <option name="LAST_COMMIT_MESSAGE" value="Modif. ajoute un dataclass et une methode qui determine si les NPC sont vivants ou pas apres plusieurs combats." />
   </component>
 </project>

@@ -5,9 +5,13 @@ Exercice de classe 3
 """
 
 import random
+from collections import Counter
 from dataclasses import dataclass
 
 health_pool = []
+alignement = ["lawful good", "lawful neutral", "lawful evil"
+    , "neutral good", "true neutral", "neutral evil"
+    , "chaotic good", "chaotic neutral", "chaotic evil"]
 
 
 def stats():
@@ -24,8 +28,35 @@ def stats():
     donnees.pop()
     return sum(donnees)
 
+
 @dataclass
-class DATA:
+class Item:
+    quantity: int
+    name: str
+
+
+class Bag:
+    def __init__(self):
+        # self.item_list = ["lamp oil", "rope", "bomb"]
+        self.bag = []
+
+    def adding_items(self, item_ajouter: Item):
+        # self.bag.append(random.choice(self.item_list))
+        self.bag.append(item_ajouter)
+        # Counter(self.bag)
+        # if item_ajouter = None:
+          # continue
+
+    def removing_items(self):
+        self.bag.pop()
+        # Counter(self.bag)
+
+
+b = Bag()
+b.adding_items(Item(2, "or"))
+b.adding_items(Item(30, "argent"))
+b.adding_items(Item(10, "argent"))
+print(b.bag)
 
 
 class NPC:
@@ -42,6 +73,7 @@ class NPC:
         self.npc_iq = stats()
         self.npc_wisdom = stats()
         self.npc_cha = stats()
+        self.attribut = random.choice(alignement)
 
     def show_info(self):
         print(f"{self.npc_name} the {self.npc_profession} NPC:\n"
@@ -56,16 +88,19 @@ class NPC:
 
 
 class Enum:
-    def __init__(self):
-        self.lawful_good = None
-        self.lawful_neutral = None
-        self.lawful_evil = None
-        self.chaotic_good = None
-        self.chaotic_neutral = None
-        self.chaotic_evil = None
-        self.neutral_good = None
-        self.true_neutral = None
-        self.neutral_evil = None
+    def __init__(self):  # [colonne;rangée]
+        #    self.lawful_good = None # [1;1]
+        #    self.lawful_neutral = None # [1;2]
+        #    self.lawful_evil = None # [1;3]
+        #    self.chaotic_good = None # [3;1]
+        #    self.chaotic_neutral = None # [3;2]
+        #    self.chaotic_evil = None # [3;3]
+        #    self.neutral_good = None # [2;1]
+        #    self.true_neutral = None # [2;2]
+        #    self.neutral_evil = None # [2;3]
+        self.alignement = ["lawful good", "lawful neutral", "lawful evil"
+            , "neutral good", "true neutral", "neutral evil"
+            , "chaotic good", "chaotic neutral", "chaotic evil"]
 
 
 class Kobold(NPC):
@@ -75,7 +110,8 @@ class Kobold(NPC):
     def show_kobold(self):
         print(f"Name: {self.npc_name}\n"
               f"HP: {self.npc_health}\n"
-              f"Strength: {self.npc_strength}")
+              f"Strength: {self.npc_strength}\n"
+              f"Attribut: {self.attribut}\n")
 
     def attaquer(self, cible):
         capable = random.randint(1, 20)
@@ -111,7 +147,8 @@ class Hero(NPC):
     def show_hero(self):
         print(f"Name: {self.npc_name}\n"
               f"HP: {self.npc_health}\n"
-              f"Strength: {self.npc_strength}\n")
+              f"Strength: {self.npc_strength}\n"
+              f"Attribut: {self.attribut}\n")
 
     def attaquer(self, cible):
         capable = random.randint(1, 20)
@@ -153,7 +190,3 @@ while combat:
         combat = False
     h.show_hero()
     k.show_kobold()
-
-
-
-
