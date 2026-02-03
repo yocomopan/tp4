@@ -7,12 +7,20 @@ Exercice de classe 3
 import random
 from collections import Counter
 from dataclasses import dataclass
+from enum import Enum
 
-health_pool = []
-alignement = ["lawful good", "lawful neutral", "lawful evil"
-    , "neutral good", "true neutral", "neutral evil"
-    , "chaotic good", "chaotic neutral", "chaotic evil"]
 
+class Alignment(Enum):
+    LAWFUL_GOOD = 0
+    LAWFUL_NEUTRAL = 1
+    LAWFUL_EVIL = 2
+    CHAOTIC_GOOD = 3
+    CHAOTIC_NEUTRAL = 4
+    CHAOTIC_EVIL = 5
+    NEUTRAL_GOOD = 6
+    TRUE_NEUTRAL = 7
+    NEUTRAL_EVIL = 8
+    UNDEFINED = 9
 
 def stats():
     """
@@ -41,11 +49,17 @@ class Bag:
         self.bag = []
 
     def adding_items(self, item_ajouter: Item):
-        # self.bag.append(random.choice(self.item_list))
-        self.bag.append(item_ajouter)
+        if len(self.bag) == 0:
+            self.bag.append(item_ajouter)
+        else:
+            for item in self.bag:
+                if item_ajouter.name == item.name:
+                    item.quantity += item_ajouter.quantity
+
+        #self.bag.append(item_ajouter)
         # Counter(self.bag)
         # if item_ajouter = None:
-          # continue
+        # continue
 
     def removing_items(self):
         self.bag.pop()
@@ -73,7 +87,7 @@ class NPC:
         self.npc_iq = stats()
         self.npc_wisdom = stats()
         self.npc_cha = stats()
-        self.attribut = random.choice(alignement)
+        self.alignement = Alignment.UNDEFINED
 
     def show_info(self):
         print(f"{self.npc_name} the {self.npc_profession} NPC:\n"
@@ -87,25 +101,39 @@ class NPC:
               f"- {self.npc_health} health et {self.npc_armor} armure\n")
 
 
-class Enum:
-    def __init__(self):  # [colonne;rangée]
-        #    self.lawful_good = None # [1;1]
-        #    self.lawful_neutral = None # [1;2]
-        #    self.lawful_evil = None # [1;3]
-        #    self.chaotic_good = None # [3;1]
-        #    self.chaotic_neutral = None # [3;2]
-        #    self.chaotic_evil = None # [3;3]
-        #    self.neutral_good = None # [2;1]
-        #    self.true_neutral = None # [2;2]
-        #    self.neutral_evil = None # [2;3]
-        self.alignement = ["lawful good", "lawful neutral", "lawful evil"
-            , "neutral good", "true neutral", "neutral evil"
-            , "chaotic good", "chaotic neutral", "chaotic evil"]
+class Alignment(Enum):
+    LAWFUL_GOOD = 0
+    LAWFUL_NEUTRAL = 1
+    LAWFUL_EVIL = 2
+    CHAOTIC_GOOD = 3
+    CHAOTIC_NEUTRAL = 4
+    CHAOTIC_EVIL = 5
+    NEUTRAL_GOOD = 6
+    TRUE_NEUTRAL = 7
+    NEUTRAL_EVIL = 8
+    UNDEFINED = 9
+
+
+# class Enum:
+#     def __init__(self):  # [colonne;rangée]
+#         #    self.lawful_good = None # [1;1]
+#         #    self.lawful_neutral = None # [1;2]
+#         #    self.lawful_evil = None # [1;3]
+#         #    self.chaotic_good = None # [3;1]
+#         #    self.chaotic_neutral = None # [3;2]
+#         #    self.chaotic_evil = None # [3;3]
+#         #    self.neutral_good = None # [2;1]
+#         #    self.true_neutral = None # [2;2]
+#         #    self.neutral_evil = None # [2;3]
+#         self.alignement = ["lawful good", "lawful neutral", "lawful evil"
+#             , "neutral good", "true neutral", "neutral evil"
+#             , "chaotic good", "chaotic neutral", "chaotic evil"]
 
 
 class Kobold(NPC):
     def __init__(self, race="Kobold"):
         super().__init__(name="Pob Bob", race=race, species="Reptile")
+        self.alignement = Alignment.NEUTRAL_EVIL
 
     def show_kobold(self):
         print(f"Name: {self.npc_name}\n"
