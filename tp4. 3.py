@@ -139,7 +139,7 @@ class Kobold(NPC):
         print(f"Name: {self.npc_name}\n"
               f"HP: {self.npc_health}\n"
               f"Strength: {self.npc_strength}\n"
-              f"Attribut: {self.attribut}\n")
+              f"Attribut: {self.alignement}\n")
 
     def attaquer(self, cible):
         capable = random.randint(1, 20)
@@ -176,7 +176,7 @@ class Hero(NPC):
         print(f"Name: {self.npc_name}\n"
               f"HP: {self.npc_health}\n"
               f"Strength: {self.npc_strength}\n"
-              f"Attribut: {self.attribut}\n")
+              f"Attribut: {self.alignement}\n")
 
     def attaquer(self, cible):
         capable = random.randint(1, 20)
