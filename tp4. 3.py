@@ -61,9 +61,14 @@ class Bag:
         # if item_ajouter = None:
         # continue
 
-    def removing_items(self):
-        self.bag.pop()
-        # Counter(self.bag)
+    def removing_items(self, item_remove: Item):
+        if len(self.bag) == 0:
+            self.bag.pop()
+        else:
+            for item in self.bag:
+                if item_remove.name == item.name:
+                    item.quantity -= item_remove.quantity
+# Counter(self.bag)
 
 
 b = Bag()
