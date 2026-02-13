@@ -5,7 +5,6 @@ Exercice de classe 3
 """
 
 import random
-from collections import Counter
 from dataclasses import dataclass
 from enum import Enum
 
@@ -21,6 +20,7 @@ class Alignment(Enum):
     TRUE_NEUTRAL = 7
     NEUTRAL_EVIL = 8
     UNDEFINED = 9
+
 
 def stats():
     """
@@ -49,33 +49,58 @@ class Bag:
         self.bag = []
 
     def adding_items(self, item_ajouter: Item):
+        # si sac vide, ajouter sans validation.
         if len(self.bag) == 0:
             self.bag.append(item_ajouter)
         else:
+            item_trouve = False
+            # Le meme item a ajouter que celui qui est dans le sac.
             for item in self.bag:
                 if item_ajouter.name == item.name:
                     item.quantity += item_ajouter.quantity
+                    item_trouve = True
+                    break
 
-        #self.bag.append(item_ajouter)
-        # Counter(self.bag)
-        # if item_ajouter = None:
-        # continue
+            if not item_trouve:
+                self.bag.append(item_ajouter)
+
 
     def removing_items(self, item_remove: Item):
         if len(self.bag) == 0:
-            self.bag.pop()
+            return
         else:
             for item in self.bag:
                 if item_remove.name == item.name:
-                    item.quantity -= item_remove.quantity
+                    qte_restante = item.quantity - item_remove.quantity
+                    if qte_restante <= 0:
+                        item.quantity = 0
+                        print(f"No {item.name}")
+                        self.bag.pop(item == 0)
+                    if not qte_restante <= 0:
+                        print(f"lost {item_remove.quantity} {item.name}")
+                        item.quantity -= item_remove.quantity
+                        return
+
+
+
+
+
+
 # Counter(self.bag)
 
 
 b = Bag()
-b.adding_items(Item(2, "or"))
-b.adding_items(Item(30, "argent"))
-b.adding_items(Item(10, "argent"))
+b.adding_items(Item(9, "Gold"))
+b.adding_items(Item(9, "Gold"))
+b.adding_items(Item(9, "Silver"))
+b.adding_items(Item(9, "Silver"))
+
+b.adding_items(Item(random.randint(1,10), "Silver"))
+b.adding_items(Item(random.randint(1,10), "Gold"))
+
+b.removing_items(Item(10, "Gold"))
 print(b.bag)
+exit(0)
 
 
 class NPC:
@@ -104,35 +129,6 @@ class NPC:
               f"- Wisdom {self.npc_wisdom}\n"
               f"- Charisma {self.npc_cha}\n"
               f"- {self.npc_health} health et {self.npc_armor} armure\n")
-
-
-class Alignment(Enum):
-    LAWFUL_GOOD = 0
-    LAWFUL_NEUTRAL = 1
-    LAWFUL_EVIL = 2
-    CHAOTIC_GOOD = 3
-    CHAOTIC_NEUTRAL = 4
-    CHAOTIC_EVIL = 5
-    NEUTRAL_GOOD = 6
-    TRUE_NEUTRAL = 7
-    NEUTRAL_EVIL = 8
-    UNDEFINED = 9
-
-
-# class Enum:
-#     def __init__(self):  # [colonne;rangée]
-#         #    self.lawful_good = None # [1;1]
-#         #    self.lawful_neutral = None # [1;2]
-#         #    self.lawful_evil = None # [1;3]
-#         #    self.chaotic_good = None # [3;1]
-#         #    self.chaotic_neutral = None # [3;2]
-#         #    self.chaotic_evil = None # [3;3]
-#         #    self.neutral_good = None # [2;1]
-#         #    self.true_neutral = None # [2;2]
-#         #    self.neutral_evil = None # [2;3]
-#         self.alignement = ["lawful good", "lawful neutral", "lawful evil"
-#             , "neutral good", "true neutral", "neutral evil"
-#             , "chaotic good", "chaotic neutral", "chaotic evil"]
 
 
 class Kobold(NPC):

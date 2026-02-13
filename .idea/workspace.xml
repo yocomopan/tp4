@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da12b831-685f-49ad-b58c-c71b9927faa3" name="Changes" comment="Modif. class Alignmenet Enum ajouter pour etre capable de changer quand on veut la nature du personnage. Modifications a class Bag (fonctionnement)">
+    <list default="true" id="da12b831-685f-49ad-b58c-c71b9927faa3" name="Changes" comment="Modif. ajouter l'abilite de enlever des items du sac, donc la methode removing_items fonctionne maintenant">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tp4. 3.py" beforeDir="false" afterPath="$PROJECT_DIR$/tp4. 3.py" afterDir="false" />
     </list>
@@ -379,7 +379,23 @@
       <option name="project" value="LOCAL" />
       <updated>1770138670801</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Modif. changer le self.attribut en self.alignement">
+      <option name="closed" value="true" />
+      <created>1770411510559</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1770411510559</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Modif. ajouter l'abilite de enlever des items du sac, donc la methode removing_items fonctionne maintenant">
+      <option name="closed" value="true" />
+      <created>1770412105988</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1770412105988</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -394,8 +410,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Modif. removed 2-3 def, modif. code" />
-    <MESSAGE value="Modif. added 2 files #5 #6, added class humain" />
     <MESSAGE value="Modif. added separate files, file 1 StringFoo commands, file 6 removed charisma, added dexterity, can dodge attacks" />
     <MESSAGE value="Modif. new str, translated to french" />
     <MESSAGE value="Modif. translated to french" />
@@ -419,6 +433,19 @@
     <MESSAGE value="Modif. ajoute un dataclass et une methode qui determine si les NPC sont vivants ou pas apres plusieurs combats." />
     <MESSAGE value="Modif. ajoute d'un class 'bag' qui ajoute et efface des items ajouter. list d'alignements incomplet." />
     <MESSAGE value="Modif. class Alignmenet Enum ajouter pour etre capable de changer quand on veut la nature du personnage. Modifications a class Bag (fonctionnement)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Modif. class Alignmenet Enum ajouter pour etre capable de changer quand on veut la nature du personnage. Modifications a class Bag (fonctionnement)" />
+    <MESSAGE value="Modif. changer le self.attribut en self.alignement" />
+    <MESSAGE value="Modif. ajouter l'abilite de enlever des items du sac, donc la methode removing_items fonctionne maintenant" />
+    <option name="LAST_COMMIT_MESSAGE" value="Modif. ajouter l'abilite de enlever des items du sac, donc la methode removing_items fonctionne maintenant" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
