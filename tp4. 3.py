@@ -45,11 +45,12 @@ class Item:
 
 class Bag:
     def __init__(self):
-        # self.item_list = ["lamp oil", "rope", "bomb"]
         self.bag = []
 
     def adding_items(self, item_ajouter: Item):
         # si sac vide, ajouter sans validation.
+        print(f"gained {item_ajouter.quantity} {item_ajouter.name}")
+
         if len(self.bag) == 0:
             self.bag.append(item_ajouter)
         else:
@@ -64,43 +65,46 @@ class Bag:
             if not item_trouve:
                 self.bag.append(item_ajouter)
 
-
     def removing_items(self, item_remove: Item):
         if len(self.bag) == 0:
             return
-        else:
-            for item in self.bag:
-                if item_remove.name == item.name:
-                    qte_restante = item.quantity - item_remove.quantity
-                    if qte_restante <= 0:
-                        item.quantity = 0
-                        print(f"No {item.name}")
-                        self.bag.pop(item == 0)
-                    if not qte_restante <= 0:
-                        print(f"lost {item_remove.quantity} {item.name}")
-                        item.quantity -= item_remove.quantity
-                        return
 
+        item_found = False
+        for item in self.bag:
+            if item_remove.name == item.name:
+                qte_restante = item.quantity - item_remove.quantity
+                if qte_restante < 0:  # Smaller or equal to 0
+                    print("Not enough item qty to remove.")
+                    return
+                elif qte_restante > 0:
+                    print(f"lost {item_remove.quantity} {item.name}")
+                    item.quantity -= item_remove.quantity
+                    item_found = True
+                    break
+                else:
+                    item_found = True
+                    self.bag.remove(item_remove)
+                    break
 
-
-
-
+        if not item_found:
+            print(f"Can't remove {item_remove.quantity} {item_remove.name} if {item_remove.name} is not in the bag")
 
 # Counter(self.bag)
 
 
 b = Bag()
-b.adding_items(Item(9, "Gold"))
-b.adding_items(Item(9, "Gold"))
-b.adding_items(Item(9, "Silver"))
-b.adding_items(Item(9, "Silver"))
+b.adding_items(Item(10, "Gold"))
+b.adding_items(Item(10, "Gold"))
+b.adding_items(Item(10, "Silver"))
+b.adding_items(Item(10, "Silver"))
 
-b.adding_items(Item(random.randint(1,10), "Silver"))
-b.adding_items(Item(random.randint(1,10), "Gold"))
+b.removing_items(Item(19, "gdgd"))
+# b.removing_items(Item(25, "Silver"))
+# b.removing_items(Item(random.randint(1, 5), "Gold"))
+# b.removing_items(Item(random.randint(1, 5), "Silver"))
 
-b.removing_items(Item(10, "Gold"))
 print(b.bag)
-exit(0)
+
 
 
 class NPC:
@@ -172,6 +176,7 @@ class Hero(NPC):
     def __init__(self, race="humain"):
         name = input("Quelle est votre nom? ")
         super().__init__(name, race=race, species="Ape")
+        self.bag = Bag()
 
     def show_hero(self):
         print(f"Name: {self.npc_name}\n"
@@ -206,6 +211,8 @@ class Hero(NPC):
 n = NPC("A", "B", "C", "D")
 h = Hero()
 k = Kobold()
+
+h.bag.adding_items(Item(3, "or"))
 combat = True
 while combat:
     # for i in range(40):
@@ -219,3 +226,5 @@ while combat:
         combat = False
     h.show_hero()
     k.show_kobold()
+
+
